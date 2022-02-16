@@ -3,18 +3,20 @@ package com.dai.authentication.service;
 import java.util.List;
 
 import com.dai.authentication.domain.Role;
-import com.dai.authentication.domain.User;
+import com.dai.authentication.domain.Usuario;
 
 public interface UserService {
 
-	User saveUser(User user);
+	Usuario saveUser(Usuario user);
 
 	Role saveRole(Role role);
 
 	void addRoleToUser(String username, String roleName);
 
-	User getUser(String username);
+	Usuario getUser(String username);
 
-	List<User> getUsers();
+	List<Usuario> getUsers();
+	
+	List<Role> getRoles();
 
 }
